@@ -39,8 +39,7 @@
     <mvc:interceptor>    
         <!-- 匹配的是url路径， 如果不配置或/**,将拦截所有的Controller -->  
         <mvc:mapping path="/**" />  
-        <mvc:exclude-mapping path="/login" />  
-        <mvc:exclude-mapping path="/authImg"/>
+        <mvc:exclude-mapping path="/login" />
         <mvc:exclude-mapping path="/loginvalidate"/>
         <bean class="interceptor.LoginIntercepter"></bean>    
     </mvc:interceptor>  

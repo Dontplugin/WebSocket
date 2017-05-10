@@ -67,11 +67,11 @@ body{
         // 指定websocket路径
         var websocket;
         if ('WebSocket' in window) {
-			websocket = new WebSocket("ws://localhost:8080/Spring-websocket/ws?uid="+${sessionScope.uid});
+			websocket = new WebSocket("ws://localhost:8080/ws?uid="+${sessionScope.uid});
 		} else if ('MozWebSocket' in window) {
-			websocket = new MozWebSocket("ws://localhost:8080/Spring-websocket/ws"+${sessionScope.uid});
+			websocket = new MozWebSocket("ws://localhost:8080/ws"+${sessionScope.uid});
 		} else {
-			websocket = new SockJS("http://localhost:8080/Spring-websocket/ws/sockjs"+${sessionScope.uid});
+			websocket = new SockJS("http://localhost:8080/ws/sockjs"+${sessionScope.uid});
 		}
         //var websocket = new WebSocket('ws://localhost:8080/Spring-websocket/ws');
         websocket.onmessage = function(event) {
